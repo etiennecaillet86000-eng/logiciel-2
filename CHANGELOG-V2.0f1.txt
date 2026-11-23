@@ -1,0 +1,7 @@
+CHANGELOG — V2.0f1
+
+- Suppression de l’écran et de la route « Saisie des ventes »; le lien du tableau de bord ouvre le Journal.
+- Suppression des onglets Stock Entrées et Sorties; Inventaire et Réconciliation conservés.
+- Ajout des frais variables (% du CA HT et montant par ticket) dans Frais fixes, sous une section Frais variables distincte.
+- Frais variables intégrés dans Business plan réel, Rentabilité mix produit et compte de résultat.
+- Paramètres persistés avec valeurs par défaut nulles; clé de stockage et événements backend inchangés.

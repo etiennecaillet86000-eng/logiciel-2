@@ -1,0 +1,8 @@
+Gestion Resto Local — V2.0h
+
+- Nouveau paramétrage pédagogique des frais variables avec plusieurs modes de calcul, valeurs modifiables et activation individuelle.
+- Prise en compte dans Business initial, Business plan réel, Rentabilité mix produit et compte de résultat. Les hypothèses historiques en % CA et €/ticket sont conservées.
+- Simulateur Carte présenté en colonnes empilées, tableaux et indicateurs plus faciles à parcourir.
+- Nouveau module Factures & devis: numérotation annuelle, clients, lignes, TVA issue des recettes, statuts et impression navigateur. Liaison optionnelle et unique d’une facture catalogue au Journal, verrouillée après liaison pour éviter les doublons.
+- Extension non destructive du journal local avec documents; mêmes clés et données existantes préservées.
+- Tests Node de calcul ajoutés. Compilation Vite / TypeScript non validée dans l’environnement courant (npm endommagé, dépendances absentes).

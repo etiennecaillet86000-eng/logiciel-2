@@ -1,0 +1,8 @@
+Gestion Resto Local — V2.0g
+
+- Bilan réel et prévisionnel accessibles dans Finance, avec source prévisionnelle au choix. Affichage explicite de l’écart actif/passif, explications et impression navigateur.
+- Centralisation et personnalisation des taux sociaux, impôt sur le revenu/sociétés et estimations TVA; remise aux valeurs indicatives.
+- Projection fiscale IR/IS reliée au régime juridique enregistré; cotisations d’associés et investisseurs calculées selon le statut et le pacte social.
+- Ajout de tests dédiés au calcul du bilan et au recalcul des charges selon statut.
+- Conservation de la clé de stockage, du lanceur local et du chargement différé des pages.
+- Valeurs réglementaires indicatives, modifiables et à faire valider.

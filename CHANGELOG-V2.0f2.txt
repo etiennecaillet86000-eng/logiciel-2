@@ -1,0 +1,14 @@
+GESTION RESTO — NOTES DE VERSION V2.0f2
+
+Cette mise à jour réorganise le suivi de l’activité du restaurant.
+
+• Opérations propose maintenant trois périodes : Jour, Mois et Année.
+• Les chiffres d’affaires HT et TTC, tickets, ticket moyen, coût et marge matière sont regroupés dans des indicateurs lisibles.
+• Les achats et pertes estimées sont repris depuis les factures et pertes du Journal.
+• Les encaissements sont ventilés par moyen de paiement; le net estimé tient compte de la commission des titres-restaurant.
+• Un graphique permet de comparer CA HT et TTC mois par mois.
+• Le tableau de bord et l’Historique utilisent les mêmes règles de calcul que les Opérations.
+• La saisie des tickets, factures et pertes se fait dans le Journal. Le raccourci « + Vente » et l’ancienne fenêtre de vente ont été retirés.
+• Les anciennes ventes restent prises en compte; la clé des données locales reste inchangée pour préserver les données existantes.
+
+À SAVOIR : les montants de coût matière et de pertes sont indicatifs et dépendent des informations disponibles dans les recettes, les ingrédients et le Journal. Faites une sauvegarde JSON avant toute importation de données.

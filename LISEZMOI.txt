@@ -1,0 +1,32 @@
+GESTION RESTO — VERSION LOCALE WINDOWS
+Version V2.0i
+
+DÉMARRER L’APPLICATION
+1. Installez Node.js LTS depuis https://nodejs.org/ si ce n’est pas déjà fait.
+2. Décompressez le dossier Gestion-Resto-Local-V2.0i dans un emplacement de votre choix.
+3. Double-cliquez sur « Lancer-Gestion-Resto.bat ».
+4. Au premier démarrage, une connexion Internet est nécessaire pour installer les outils.
+5. Le navigateur s’ouvre sur l’application locale. Gardez la fenêtre noire ouverte tant que vous utilisez l’application.
+
+VOS DONNÉES
+Les informations restent dans le stockage local du navigateur, sous la clé existante gestion-resto-local-v1. Exportez régulièrement une sauvegarde JSON et conservez-en une copie avant import. L’import remplace les données présentes. La mise à jour conserve les anciens documents et complète les champs commerciaux manquants; aucune vente historique n’est transformée en encaissement client.
+
+FACTURES & DEVIS
+Dans Ventes > Factures & devis, les sous-onglets séparent « Devis / Bons de livraison » et « Factures ». Les documents gardent numéro annuel, client, lignes, TVA et impression navigateur. Choisissez le statut « Bon de livraison » pour créer automatiquement la facture correspondante et décrémenter une fois le stock des ingrédients des recettes vendues (les lignes libres n’ont pas de stock); le lien est conservé des deux côtés et répéter l’action ne crée pas de doublon. Les factures issues d’un bon de livraison reprennent le client, les lignes et la TVA. Le bouton « Annuler le bon de livraison » supprime la facture liée, restaure les mouvements de stock et remet le devis à son statut précédent; si la facture était payée, le dialogue confirme aussi l’annulation de l’encaissement. Les factures peuvent être supprimées avec confirmation; leur paiement éventuel et les liens BL/devis sont traités. La recherche par client, numéro ou date accepte JJ/MM/AAAA et AAAA-MM-JJ.
+
+Pour une facture, « Marquer envoyée » la place en « En cours de paiement » et renseigne la date d’envoi, modifiable. « Marquer payée » demande une date et un mode (espèces, carte, virement ou chèque), puis ajoute une seule écriture distincte dans Journal > Encaissements clients avec les montants HT, TVA et TTC. Cette écriture n’est ni un ticket ni une vente catalogue; elle n’a aucun effet de stock. Elle alimente le CA HT/TTC, par date de paiement et mode, dans les indicateurs opérationnels et comptables. « Annuler le paiement » retire l’écriture. Les lignes de devis, bons de livraison et factures se saisissent en prix unitaire TTC. Le taux de TVA est limité à 5,5 % ou 10 %; les montants HT et TVA sont recalculés au centime. Le prix de recette est prérempli en TTC. Les anciens documents stockés en HT restent lisibles et leur TTC est reconstitué sans modifier les données conservées.
+
+Le Journal conserve aussi ses tickets, factures d’achat et pertes habituels. Les anciens statuts commerciaux sont normalisés lors de la lecture/import : documents livrés vers « Bon de livraison », devis acceptés/refusés conservés, factures payées vers « Payé » et autres factures vers « En cours de paiement ». L’absence de tableau documents dans une sauvegarde ancienne est traitée par une liste vide.
+
+OPÉRATIONS, ESTIMATIONS ET IMPRESSION
+Dans Opérations, la vue Mois utilise un choix de mois et d’année; la vue Personnalisé permet de saisir une période valide. Le bilan simplifié présente actif/passif, détail des postes, créances clients, dettes fournisseurs, encaissements/décaissements estimés et un panneau Tiers. Les achats du Journal peuvent être marqués Payée ou À payer; les anciennes factures d’achat sans statut sont considérées Payées. Des corrections manuelles du bilan ne sont conservées que pendant la session. Les soldes banque, comptes courants et dettes fiscales/sociales restent estimatifs ou à compléter.
+
+Opérations et Comptabilité sont des outils indicatifs; les paiements clients alimentent le CA, distinctement des tickets, sans créer une vente catalogue ni un mouvement de stock. Les montants et taux de TVA doivent être contrôlés selon votre situation. Les boutons Imprimer / PDF ouvrent la fonction d’impression du navigateur.
+
+V2.0h — Frais variables et documents commerciaux : lignes de frais paramétrables et premiers devis/factures locaux.
+V2.0h2 — Séparation devis/BL et factures, facture liée idempotente et suivi du paiement.
+V2.0h3 — PU HT arrondi, stock géré au BL (annulation restaurable), encaissements client intégrés au CA et recherche/suppression des documents.
+V2.0i — Saisie commerciale TTC, périodes opérationnelles mois/personnalisées, bilan simplifié actif/passif, suivi Payé/À payer et panneau Tiers.
+
+SÉCURITÉ ET LIMITES
+Les données locales ne sont pas chiffrées. Protégez l’accès à l’ordinateur et sauvegardez régulièrement. Cet outil ne remplace pas une comptabilité ni un conseil professionnel.

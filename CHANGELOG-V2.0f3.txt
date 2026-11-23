@@ -1,0 +1,9 @@
+Gestion Resto Local — V2.0f3
+
+- Chargement différé des pages avec React.lazy/Suspense et séparation du code en lots React, interface, graphiques et requêtes.
+- Taille du JavaScript d’entrée réduite de 1 133,51 ko (monolithe V2.0f2) à environ 94 ko; aucun chunk ne dépasse 500 ko.
+- Validation de la structure des sauvegardes JSON avant import et limite de taille de fichier à 25 Mo.
+- Ajout d’une politique CSP compatible avec les fonctions utilisées et confirmation du serveur Vite lié à 127.0.0.1.
+- Suppression d’artefacts hérités et retrait des dépendances déclarées sans usage.
+- Conservation de la clé de données locale gestion-resto-local-v1.
+- Tests: 32/32; TypeScript et build réussis.
