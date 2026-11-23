@@ -1,0 +1,1 @@
+const s=["Entrée","Plats","Snacking","Boisson","Dessert","Accompagnement","Formules"],e=["Viandes & Volailles","Marée","B.O.F","Fruits & Légumes","Épicerie Sèche","Épicerie Sucrée","Boissons","Produits Laitiers","Surgelés","Autres"],i=["Kg","L","U"];export{e as I,i as M,s as R};

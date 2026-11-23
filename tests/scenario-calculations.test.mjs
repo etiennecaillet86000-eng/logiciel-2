@@ -1,0 +1,10 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {coutRemunerationDirigeant,calculerCotisationsAssocies} from "../src/core/utils/scenarioCalculations.js";
+import {calculateTaxForRegime} from "../src/core/utils/taxRates.ts";
+import {calculerEquilibreBilan} from "../src/core/utils/balanceCalculations.ts";
+const rates={tns:45,assimileSalarie:42,isReduit:15,isNormal:25,seuilIsReduit:42500,irTranches:[{plafond:11600,taux:0},{plafond:null,taux:45}]};
+test("bilan: total actif/passif équilibrés et écart explicite s’il ne l’est pas",()=>{assert.equal(calculerEquilibreBilan(120000,120000).equilibre,true);assert.equal(calculerEquilibreBilan(120000,119000).ecart,1000);assert.equal(calculerEquilibreBilan(120000,119000).equilibre,false);});
+test("changement de statut recalcule les cotisations sociales estimées",()=>{assert.equal(coutRemunerationDirigeant(10000,"TNS",rates).cotisations,4500);assert.equal(coutRemunerationDirigeant(10000,"assimile",rates).cotisations,4200);});
+test("investisseur passif exclu et pacte social désactivé n’ajoute pas de charges",()=>{const a=[{typeAssocie:"investisseur",remunerationAnnuelle:9000},{typeAssocie:"dirigeant",statut:"TNS",remunerationAnnuelle:10000}];assert.equal(calculerCotisationsAssocies(a,rates),4500);assert.equal(calculerCotisationsAssocies(a,rates,false),0);});
+test("le choix IR/IS change l’impôt estimé",()=>{assert.equal(calculateTaxForRegime(50000,"IS",rates),8250);assert.equal(calculateTaxForRegime(50000,"IR",rates),17280);});
